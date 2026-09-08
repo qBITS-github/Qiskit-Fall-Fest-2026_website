@@ -1,5 +1,6 @@
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
+import { ScrollVideo } from "@/components/sections/ScrollVideo";
 import { Hero } from "@/components/sections/Hero";
 import { DetailsSection } from "@/components/sections/DetailsSection";
 import { HackathonSection } from "@/components/sections/HackathonSection";
@@ -16,6 +17,7 @@ export default function Home() {
     <>
       <Navbar />
       <main>
+        <ScrollVideo />
         <Hero />
         <DetailsSection />
         <HackathonSection />
