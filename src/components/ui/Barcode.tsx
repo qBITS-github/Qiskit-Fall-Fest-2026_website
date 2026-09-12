@@ -70,9 +70,14 @@ export function Barcode({
   const safeValue = value.toUpperCase().replace(/[^0-9A-Z\-.$/+% ]/g, "");
   const encodedStr = `*${safeValue}*`;
 
+  // Code 39 readers need clear, blank space around the start and stop symbols.
+  // Keep a 10-module quiet zone on each side inside the SVG itself so it is
+  // preserved in screenshots and printed passes.
+  const quietZone = narrowWidth * 10;
+
   // Build the list of bars to draw
   const bars: { x: number; width: number }[] = [];
-  let currentX = 0;
+  let currentX = quietZone;
 
   for (let cIndex = 0; cIndex < encodedStr.length; cIndex++) {
     const char = encodedStr[cIndex];
@@ -94,7 +99,7 @@ export function Barcode({
     currentX += narrowWidth;
   }
 
-  const totalWidth = currentX;
+  const totalWidth = currentX + quietZone;
 
   return (
     <div className={cn("inline-flex flex-col items-center", className)}>
@@ -106,6 +111,7 @@ export function Barcode({
         aria-label={`Barcode for ${value}`}
         role="img"
       >
+        <rect width={totalWidth} height={height} fill="white" />
         {bars.map((bar, idx) => (
           <rect
             key={idx}
@@ -113,12 +119,12 @@ export function Barcode({
             y={0}
             width={bar.width}
             height={height}
-            className="fill-pink-ink transition-colors print:fill-black"
+            fill="black"
           />
         ))}
       </svg>
       {showText && (
-        <span className="mt-2 font-mono text-[11px] tracking-[0.28em] text-pink-ink print:text-black">
+        <span className="mt-2 font-mono text-[11px] tracking-[0.28em] text-black">
           {safeValue}
         </span>
       )}

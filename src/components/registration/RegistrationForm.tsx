@@ -276,7 +276,7 @@ export function RegistrationForm() {
               {/* Barcode Section */}
               <div className="mt-8 rounded-2xl border border-line bg-surface/80 p-5 print:border-slate-300 print:bg-slate-50">
                 <div className="flex flex-col items-center justify-center gap-3">
-                  <Barcode value={ticketId} className="w-full max-w-[360px]" height={52} />
+                  <Barcode value={ticketId} className="w-full max-w-[360px]" height={80} />
                   <div className="flex w-full items-center justify-between border-t border-line-soft pt-3 font-mono text-[10px] text-muted print:border-slate-300 print:text-slate-700">
                     <span className="flex items-center gap-1.5 font-semibold text-pink-ink">
                       <span className="h-1.5 w-1.5 rounded-full bg-pink shadow-[0_0_6px_rgba(255,126,182,0.8)] print:bg-slate-900" />
@@ -301,7 +301,7 @@ export function RegistrationForm() {
               Print / Save Pass
             </button>
             <a
-              href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=BITS+Qiskit+Fall+Fest+2026&details=PLUS+Qiskit+Fall+Fest+at+BITS+Pilani&location=BITS+Pilani"
+              href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=BITS+Qiskit+Fall+Fest+2026&dates=20261028%2F20261102&details=PLUS+Qiskit+Fall+Fest+at+BITS+Pilani&location=BITS+Pilani&"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-full border border-line bg-surface/40 backdrop-blur-sm px-6 py-3 font-display text-sm font-bold text-ink-dim hover:bg-surface-2 hover:text-ink transition-all"
