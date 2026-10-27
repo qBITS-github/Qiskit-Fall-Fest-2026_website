@@ -54,6 +54,15 @@ export function HackathonSection() {
         </ul>
 
         <div className="mt-8 flex flex-wrap items-center gap-3">
+          <Link
+            href="/hackathon"
+            className="group inline-flex items-center gap-2 rounded-full border border-pink/30 bg-pink/10 px-7 py-3 text-sm font-bold text-pink-ink transition-all duration-300 hover:-translate-y-0.5 hover:border-pink"
+          >
+            <FileText aria-hidden className="h-4 w-4" />
+            View Problem Statements
+            <ArrowRight aria-hidden className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+          </Link>
+
           {hackathon.rulebookHref ? (
             <a
               href={hackathon.rulebookHref}

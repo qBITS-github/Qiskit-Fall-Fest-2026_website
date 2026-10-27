@@ -6,5 +6,5 @@ export const socials: SocialLink[] = [
   { platform: "x", href: "#", handle: "To be announced" },
   { platform: "github", href: "https://github.com/qBITS-github", handle: "qBITS-github" },
   { platform: "youtube", href: "https://www.youtube.com/@qbits.bitsgoa/videos", handle: "qBITS BITS Goa" },
-  { platform: "discord", href: "https://discord.gg/EzFDVEpgd", handle: "Join server" },
+  { platform: "discord", href: "https://discord.gg/8PvyhA75Df", handle: "Join server" },
 ];

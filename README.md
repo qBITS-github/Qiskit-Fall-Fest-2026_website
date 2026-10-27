@@ -9,6 +9,17 @@ npm run dev
 
 Open http://localhost:3000.
 
+## Publish hackathon problem statements
+
+The `/hackathon` page lists challenges by Beginner and Advanced track. Add entries
+to `src/data/problem-statements.ts` using the example in that file. Each entry
+needs a unique ID, track ID, title, and description; deliverables and a downloadable
+brief are optional. Store brief files in `public/hackathon/` and reference them as
+`/hackathon/your-file.pdf`.
+
+A track displays a coming-soon message until it has an entry. Rebuild and deploy
+the site after updating the statements or adding files.
+
 ## Update the database
 
 With `DATABASE_URL` set in `.env.local`, `.env`, or the environment, run:

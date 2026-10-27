@@ -4,6 +4,7 @@ import { ArrowRight } from "lucide-react";
 import { event } from "@/data/event";
 import { HeroSphere } from "@/components/ui/HeroSphere";
 import { QffFigure } from "@/components/ui/QffFigure";
+import { TodayBanner } from "@/components/sections/TodayBanner";
 
 /** The three things anyone landing here wants to know first. */
 const facts = [
@@ -71,6 +72,8 @@ export function Hero() {
           ))}
         </div>
       </div>
+
+      <TodayBanner />
 
       <div className="mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-[minmax(0,1.08fr)_minmax(320px,0.92fr)] lg:gap-10">
         <div

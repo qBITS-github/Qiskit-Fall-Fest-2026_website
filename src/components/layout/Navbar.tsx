@@ -95,7 +95,7 @@ export function Navbar() {
       let current = "";
       for (const section of sections) {
         if (section.getBoundingClientRect().top > line) break;
-        current = `#${section.id}`;
+        current = section.id === "hackathon" ? "/hackathon" : `#${section.id}`;
       }
       setActiveId(navHrefs.has(current) ? current : "");
     };
@@ -166,12 +166,12 @@ export function Navbar() {
 
           <ul className="hidden items-center gap-0.5 lg:flex">
             {navItems.map((item) => {
-              const active = isHome && activeId === item.href;
+              const active = (isHome && activeId === item.href) || pathname === item.href;
               return (
                 <li key={item.href}>
                   <Link
-                    href={isHome ? item.href : `/${item.href}`}
-                    aria-current={active ? "true" : undefined}
+                    href={!isHome && item.href.startsWith("#") ? `/${item.href}` : item.href}
+                    aria-current={active ? (item.href.startsWith("#") || isHome ? "true" : "page") : undefined}
                     className={cn(
                       "block whitespace-nowrap rounded-full px-3.5 py-2.5 text-sm transition-colors duration-200",
                       active
@@ -244,13 +244,13 @@ export function Navbar() {
               </Link>
             </li>
             {navItems.map((item) => {
-              const active = isHome && activeId === item.href;
+              const active = (isHome && activeId === item.href) || pathname === item.href;
               return (
                 <li key={item.href}>
                   <Link
-                    href={isHome ? item.href : `/${item.href}`}
+                    href={!isHome && item.href.startsWith("#") ? `/${item.href}` : item.href}
                     onClick={() => setOpen(false)}
-                    aria-current={active ? "true" : undefined}
+                    aria-current={active ? (item.href.startsWith("#") || isHome ? "true" : "page") : undefined}
                     className={cn(
                       "block rounded-2xl px-4 py-3 text-sm transition-colors",
                       active

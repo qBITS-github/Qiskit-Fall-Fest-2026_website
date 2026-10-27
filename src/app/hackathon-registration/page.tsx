@@ -30,7 +30,7 @@ export default function HackathonRegistrationPage() {
         >
           <div className="mx-auto max-w-6xl">
             <Link
-              href="/#hackathon"
+              href="/hackathon"
               className="group inline-flex items-center gap-2 rounded-full border border-line bg-surface-2/60 px-4 py-1.5 font-mono text-xs uppercase tracking-wider text-ink-dim transition-all hover:border-pink/50 hover:text-pink-ink"
             >
               <ArrowLeft className="h-3.5 w-3.5 transition-transform group-hover:-translate-x-1" />

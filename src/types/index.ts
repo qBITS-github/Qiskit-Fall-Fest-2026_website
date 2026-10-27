@@ -5,7 +5,17 @@
 
 export interface NavItem {
   label: string;
-  href: string; // section id, e.g. "#details"
+  href: string; // section id or page path, e.g. "#details" or "/hackathon"
+}
+
+export interface ProblemStatement {
+  id: string;
+  trackId: "beginner" | "advanced";
+  title: string;
+  description: string;
+  deliverables?: string[];
+  /** Optional brief stored under /public, e.g. /hackathon/quantum-search.pdf. */
+  documentHref?: string;
 }
 
 export interface EventDetail {
@@ -17,6 +27,9 @@ export interface EventDetail {
 
 export interface ScheduleItem {
   id: string;
+  /** ISO timestamps with the venue's UTC offset; used for live highlights. */
+  startsAt: string;
+  endsAt: string;
   day: string; // "Day 1", "Day 2" — grouping key
   time: string;
   title: string;

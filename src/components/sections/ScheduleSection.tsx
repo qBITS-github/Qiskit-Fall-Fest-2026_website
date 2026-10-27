@@ -8,6 +8,8 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Section } from "@/components/ui/Section";
 import { RevealOnScroll } from "@/components/ui/RevealOnScroll";
 import { cn } from "@/lib/utils";
+import { useEventClock } from "@/hooks/use-event-clock";
+import { getScheduleHighlight } from "@/lib/schedule-highlight";
 
 /**
  * The programme, as a timeline.
@@ -22,7 +24,9 @@ export function ScheduleSection() {
     () => Array.from(new Set(schedule.map((item) => item.day))),
     [],
   );
-  const [activeDay, setActiveDay] = useState(days[0]);
+  const now = useEventClock();
+  const [selectedDay, setActiveDay] = useState<string | null>(null);
+  const activeDay = selectedDay ?? getScheduleHighlight(schedule, now)?.day ?? days[0];
 
   const items = schedule.filter((item) => item.day === activeDay);
 

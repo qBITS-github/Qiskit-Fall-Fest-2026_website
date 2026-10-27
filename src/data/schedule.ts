@@ -1,10 +1,14 @@
 import type { ScheduleItem } from "@/types";
 
 // One entry per scheduled talk. Open slots are left out until they are filled.
+// Keep the ISO timestamps (IST) aligned with day/time; the homepage uses them
+// to select upcoming sessions and mark a talk as underway.
 export const schedule: ScheduleItem[] = [
   // Wed, Oct 28
   {
     id: "oct28-1",
+    startsAt: "2026-10-28T17:00:00+05:30",
+    endsAt: "2026-10-28T18:30:00+05:30",
     day: "Wed, Oct 28",
     time: "5:00 PM - 6:30 PM",
     title: "Bhanwar Gupta",
@@ -14,6 +18,8 @@ export const schedule: ScheduleItem[] = [
   },
   {
     id: "oct28-2",
+    startsAt: "2026-10-28T18:30:00+05:30",
+    endsAt: "2026-10-28T20:00:00+05:30",
     day: "Wed, Oct 28",
     time: "6:30 PM - 8:00 PM",
     title: "Manoj Nambiar",
@@ -24,6 +30,8 @@ export const schedule: ScheduleItem[] = [
   // Thu, Oct 29
   {
     id: "oct29-1",
+    startsAt: "2026-10-29T17:00:00+05:30",
+    endsAt: "2026-10-29T18:30:00+05:30",
     day: "Thu, Oct 29",
     time: "5:00 PM - 6:30 PM",
     title: "Nick Bronn",
@@ -34,6 +42,8 @@ export const schedule: ScheduleItem[] = [
   // Fri, Oct 30
   {
     id: "oct30-2",
+    startsAt: "2026-10-30T16:00:00+05:30",
+    endsAt: "2026-10-30T17:30:00+05:30",
     day: "Fri, Oct 30",
     time: "4:00 PM - 5:30 PM",
     title: "Indrakshi Raychowdhury",
@@ -41,6 +51,8 @@ export const schedule: ScheduleItem[] = [
   },
   {
     id: "oct30-1",
+    startsAt: "2026-10-30T19:00:00+05:30",
+    endsAt: "2026-10-30T20:30:00+05:30",
     day: "Fri, Oct 30",
     time: "7:00 PM - 8:30 PM",
     title: "Anil Prabhakar",
@@ -51,6 +63,8 @@ export const schedule: ScheduleItem[] = [
   // Sat, Oct 31
   {
     id: "oct31-1",
+    startsAt: "2026-10-31T11:00:00+05:30",
+    endsAt: "2026-10-31T12:30:00+05:30",
     day: "Sat, Oct 31",
     time: "11:00 AM - 12:30 PM",
     title: "Bhupendra Singh",
@@ -60,6 +74,8 @@ export const schedule: ScheduleItem[] = [
   },
   {
     id: "oct31-2",
+    startsAt: "2026-10-31T12:30:00+05:30",
+    endsAt: "2026-10-31T14:00:00+05:30",
     day: "Sat, Oct 31",
     time: "12:30 PM - 2:00 PM",
     title: "Santosh Kumar",
@@ -69,6 +85,8 @@ export const schedule: ScheduleItem[] = [
   },
   {
     id: "oct31-3",
+    startsAt: "2026-10-31T15:00:00+05:30",
+    endsAt: "2026-10-31T16:00:00+05:30",
     day: "Sat, Oct 31",
     time: "3:00 PM - 4:00 PM",
     title: "Anupama Ray",
@@ -78,6 +96,8 @@ export const schedule: ScheduleItem[] = [
   },
   {
     id: "oct31-4",
+    startsAt: "2026-10-31T16:00:00+05:30",
+    endsAt: "2026-10-31T17:00:00+05:30",
     day: "Sat, Oct 31",
     time: "4:00 PM - 5:00 PM",
     title: "Ritajit Majumdar",
@@ -88,6 +108,8 @@ export const schedule: ScheduleItem[] = [
   // Sun, Nov 1
   {
     id: "nov1-1",
+    startsAt: "2026-11-01T11:00:00+05:30",
+    endsAt: "2026-11-01T12:30:00+05:30",
     day: "Sun, Nov 1",
     time: "11:00 AM - 12:30 PM",
     title: "Vedangi Pathak",
@@ -97,6 +119,8 @@ export const schedule: ScheduleItem[] = [
   },
   {
     id: "nov1-2",
+    startsAt: "2026-11-01T12:30:00+05:30",
+    endsAt: "2026-11-01T14:00:00+05:30",
     day: "Sun, Nov 1",
     time: "12:30 PM - 2:00 PM",
     title: "Seiji Yunoki",
