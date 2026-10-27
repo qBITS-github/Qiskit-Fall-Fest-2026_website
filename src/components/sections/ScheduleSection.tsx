@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import { MapPin } from "lucide-react";
 import { schedule } from "@/data/schedule";
 import { event } from "@/data/event";
 import { SectionHeading } from "@/components/ui/SectionHeading";
@@ -83,6 +84,12 @@ export function ScheduleSection() {
             {item.description ? (
               <p className="mt-1.5 max-w-lg text-sm leading-relaxed text-muted">
                 {item.description}
+              </p>
+            ) : null}
+            {item.venue ? (
+              <p className="mt-3 inline-flex items-center gap-1.5 rounded-md border border-pink/25 bg-pink/10 px-2.5 py-1.5 font-mono text-xs font-semibold text-pink-ink">
+                <MapPin aria-hidden="true" className="h-3.5 w-3.5 shrink-0" />
+                {item.venue}
               </p>
             ) : null}
           </RevealOnScroll>

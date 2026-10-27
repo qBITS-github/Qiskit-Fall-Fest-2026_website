@@ -22,6 +22,7 @@ export interface ScheduleItem {
   title: string;
   description: string;
   track?: string;
+  venue?: string;
 }
 
 export interface SocialLink {
