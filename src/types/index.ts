@@ -14,6 +14,7 @@ export interface ProblemStatement {
   title: string;
   description: string;
   deliverables?: string[];
+  judgingCriteria?: string[];
   /** Optional brief stored under /public, e.g. /hackathon/quantum-search.pdf. */
   documentHref?: string;
 }

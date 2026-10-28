@@ -32,7 +32,7 @@ export default function HackathonPage() {
               className="group inline-flex items-center gap-2 rounded-full border border-line bg-surface-2/60 px-4 py-1.5 font-mono text-xs uppercase tracking-wider text-ink-dim transition-colors hover:border-pink/50 hover:text-pink-ink"
             >
               <ArrowLeft aria-hidden className="h-3.5 w-3.5 transition-transform group-hover:-translate-x-1" />
-              Back to the fest
+              Return to event overview
             </Link>
 
             <p className="mt-8 font-mono text-xs uppercase tracking-[0.2em] text-muted">
@@ -42,8 +42,8 @@ export default function HackathonPage() {
               Problem Statements
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-relaxed text-ink-dim">
-              Find your challenge, explore the brief, and build with your team.
-              Problem statements for both hackathon tracks will be published here.
+              Review the problem statements for the Beginner and Advanced tracks.
+              Select a challenge and consult its complete brief for technical requirements, evaluation criteria, and submission details.
             </p>
 
             <div className="mt-6 flex flex-wrap gap-3 font-mono text-xs text-ink-dim">
@@ -64,7 +64,7 @@ export default function HackathonPage() {
                 href={hackathon.registerHref}
                 className="group inline-flex items-center gap-2 rounded-full bg-pink-fill px-7 py-3 text-sm font-bold text-white transition-all hover:-translate-y-0.5 hover:bg-pink-fill-hover"
               >
-                Register your team
+                Team registration
                 <ArrowRight aria-hidden className="h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Link>
               {hackathon.rulebookHref && (
@@ -74,7 +74,7 @@ export default function HackathonPage() {
                   className="inline-flex items-center gap-2 rounded-full border border-pink/30 bg-pink/10 px-7 py-3 text-sm font-bold text-pink-ink transition-colors hover:border-pink"
                 >
                   <FileText aria-hidden className="h-4 w-4" />
-                  Read the Rulebook
+                  View the rulebook
                 </a>
               )}
             </div>
@@ -122,10 +122,20 @@ export default function HackathonPage() {
                       </p>
                       {!!statement.deliverables?.length && (
                         <div className="mt-6">
-                          <h4 className="font-semibold text-ink">What to submit</h4>
+                          <h4 className="font-semibold text-ink">Required deliverables</h4>
                           <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-relaxed text-ink-dim">
                             {statement.deliverables.map((deliverable) => (
                               <li key={deliverable}>{deliverable}</li>
+                            ))}
+                          </ul>
+                        </div>
+                      )}
+                      {!!statement.judgingCriteria?.length && (
+                        <div className="mt-6">
+                          <h4 className="font-semibold text-ink">Judging criteria (100 points)</h4>
+                          <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-relaxed text-ink-dim">
+                            {statement.judgingCriteria.map((criterion) => (
+                              <li key={criterion}>{criterion}</li>
                             ))}
                           </ul>
                         </div>
@@ -137,7 +147,7 @@ export default function HackathonPage() {
                           className="mt-6 inline-flex items-center gap-2 text-sm font-bold text-pink-ink underline-offset-4 hover:underline"
                         >
                           <FileText aria-hidden className="h-4 w-4" />
-                          Download problem statement
+                          Download full problem statement
                         </a>
                       )}
                     </article>

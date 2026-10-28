@@ -7,7 +7,7 @@ import type {
 export const registrationHeader = {
   eyebrow: "00 · Registration",
   title: "Reserve Your Spot at QFF 2026",
-  tagline: "BITS Qiskit Fall Fest 2026 — BITS Pilani",
+  tagline: "BITS Qiskit Fall Fest 2026 | BITS Pilani",
   description:
     "Join hundreds of students, researchers, and quantum enthusiasts for three days of keynotes, guided lab sessions, and a 72-hour hackathon on real quantum hardware. Registration is completely free.",
   notice:

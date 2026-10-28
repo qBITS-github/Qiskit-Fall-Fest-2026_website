@@ -7,7 +7,7 @@ import "./globals.css";
  *
  * The fallback used to be a placeholder domain, so unless NEXT_PUBLIC_APP_URL
  * was set in the deployment the share cards on WhatsApp, Discord and Twitter
- * pointed at qff2026.example.com — the registration link previewed as a site
+ * pointed at qff2026.example.com | the registration link previewed as a site
  * nobody owns. Vercel injects the real hostname at build time, so the deploy
  * now describes itself correctly with nothing configured; setting
  * NEXT_PUBLIC_APP_URL still wins, and is what a custom domain needs.
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     template: "%s | QFF 2026",
   },
   description:
-    "BITS Goa Qiskit Fall Fest 2026 (QFF 2026) — talks, workshops, and a 72-hour quantum computing hackathon at BITS Pilani KK Birla Goa Campus.",
+    "BITS Goa Qiskit Fall Fest 2026 (QFF 2026) | talks, workshops, and a 72-hour quantum computing hackathon at BITS Pilani KK Birla Goa Campus.",
   keywords: [
     "Qiskit Fall Fest",
     "QFF 2026",
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "BITS Goa Qiskit Fall Fest 2026",
     description:
-      "A campus-wide gathering for quantum computing — talks, workshops, and a 72-hour hackathon at BITS Pilani KK Birla Goa Campus.",
+      "A campus-wide gathering for quantum computing | talks, workshops, and a 72-hour hackathon at BITS Pilani KK Birla Goa Campus.",
     url: siteUrl,
     siteName: "QFF 2026",
     type: "website",
@@ -60,7 +60,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "BITS Goa Qiskit Fall Fest 2026",
     description:
-      "A campus-wide gathering for quantum computing — talks, workshops, and a 72-hour hackathon at BITS Pilani KK Birla Goa Campus.",
+      "A campus-wide gathering for quantum computing | talks, workshops, and a 72-hour hackathon at BITS Pilani KK Birla Goa Campus.",
     images: ["/og-image-updated.png"],
   },
 };

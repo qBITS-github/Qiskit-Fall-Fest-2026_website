@@ -1,7 +1,7 @@
 /**
  * A run-up to the hackathon, using IBM's own material.
  *
- * Everything here is first-party — IBM Quantum Learning and the Qiskit docs —
+ * Everything here is first-party; IBM Quantum Learning and the Qiskit docs —
  * rather than a third-party summary of it, and every URL was checked before it
  * shipped. Ordered as a path: understand the maths, run something real, then
  * the algorithm families a 72-hour problem is likely to want.
@@ -17,7 +17,7 @@ export interface LearnStep {
 }
 
 export const learnIntro =
-  "You do not need any of this to take part — the workshops start from nothing. But if you would rather arrive already writing circuits, this is the order IBM teaches them in.";
+  "You do not need any of this to take part; the workshops start from nothing. But if you would rather arrive already writing circuits, this is the order IBM teaches them in.";
 
 export const learnSteps: LearnStep[] = [
   {

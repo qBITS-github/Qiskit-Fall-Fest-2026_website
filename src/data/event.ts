@@ -2,7 +2,7 @@ import type { EventDetail } from "@/types";
 
 /**
  * Top-level event metadata. Replace these placeholder strings with the real
- * values once they're confirmed — nothing else in the codebase needs to change.
+ * values once they're confirmed | nothing else in the codebase needs to change.
  */
 export const event = {
   fullName: "PLUS Qiskit Fall Fest 2026",
@@ -19,7 +19,7 @@ Whether you are a complete beginner or a coding veteran, join us to build tomorr
   /* The facts, stated once. These were previously literals inside three
      different components, which is how the schedule came to advertise a date
      range while the details grid still said the dates were unannounced. */
-  dates: "28 Oct — 1 Nov 2026",
+  dates: "28 Oct | 1 Nov 2026",
   format: "Talks · Workshops · 72h Hackathon",
   venueName: "BITS Pilani, K.K. Birla Goa Campus",
   venueShort: "BITS Goa",
@@ -53,7 +53,7 @@ export const hackathon = {
    */
   tracks: [
     { id: "beginner", label: "Beginner", details: "To be announced" },
-    { id: "advanced", label: "Advanced", details: "To be announced" },
+    { id: "advanced", label: "Advanced", details: "Research-level quantum optimisation and simulation challenges" },
   ],
   // Same value as TBA in components/ui/Pending; a literal so this data file
   // stays free of component imports (the node test loader only reads .ts).
