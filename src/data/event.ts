@@ -58,7 +58,7 @@ export const hackathon = {
   // Same value as TBA in components/ui/Pending; a literal so this data file
   // stays free of component imports (the node test loader only reads .ts).
   details: "To be announced",
-  rulebookHref: "",
+  rulebookHref: "/hackathon/rulebook.pdf",
   registerHref: "/hackathon-registration",
 };
 

@@ -70,11 +70,12 @@ export default function HackathonPage() {
               {hackathon.rulebookHref && (
                 <a
                   href={hackathon.rulebookHref}
-                  download
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 rounded-full border border-pink/30 bg-pink/10 px-7 py-3 text-sm font-bold text-pink-ink transition-colors hover:border-pink"
                 >
                   <FileText aria-hidden className="h-4 w-4" />
-                  View the rulebook
+                  Rulebook
                 </a>
               )}
             </div>
