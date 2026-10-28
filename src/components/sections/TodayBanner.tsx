@@ -26,7 +26,7 @@ export function TodayBanner() {
               The talk lineup
             </p>
             <h2 id="today-heading" className="mt-3 font-display text-3xl font-extrabold leading-none tracking-tight">
-              {highlight.heading}
+              Talks at QFF
             </h2>
             <p className="mt-3 flex items-center gap-2 font-mono text-xs text-white/70">
               <CalendarDays aria-hidden className="h-3.5 w-3.5" />
@@ -59,6 +59,11 @@ export function TodayBanner() {
                   <p className="mt-3 font-display text-2xl font-bold leading-tight tracking-tight">
                     {session.title}
                   </p>
+                  {session.topic && (
+                    <p className="mt-2 text-sm font-semibold leading-relaxed text-white/90">
+                      {session.topic}
+                    </p>
+                  )}
                   <p className="mt-1 min-h-5 text-sm text-white/65">{session.description}</p>
                   <p className="mt-5 font-mono text-xs font-semibold text-[#ff9ec7]">
                     {session.time}

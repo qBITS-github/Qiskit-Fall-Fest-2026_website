@@ -85,6 +85,11 @@ export function ScheduleSection() {
             <p className="mt-2 font-display text-xl font-bold tracking-tight text-ink dark:text-white sm:text-2xl">
               {item.title}
             </p>
+            {item.topic ? (
+              <p className="mt-2 max-w-2xl text-base font-semibold leading-relaxed text-ink">
+                {item.topic}
+              </p>
+            ) : null}
             {item.description ? (
               <p className="mt-1.5 max-w-lg text-sm leading-relaxed text-muted">
                 {item.description}

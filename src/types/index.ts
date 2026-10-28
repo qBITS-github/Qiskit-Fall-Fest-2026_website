@@ -33,6 +33,7 @@ export interface ScheduleItem {
   day: string; // "Day 1", "Day 2" — grouping key
   time: string;
   title: string;
+  topic?: string;
   description: string;
   track?: string;
   venue?: string;

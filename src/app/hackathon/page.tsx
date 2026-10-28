@@ -3,6 +3,7 @@ import Link from "next/link";
 import { ArrowLeft, ArrowRight, Clock, FileText, Users } from "lucide-react";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
+import { HackathonCountdown } from "@/components/hackathon/HackathonCountdown";
 import { Pending } from "@/components/ui/Pending";
 import { QffFigure } from "@/components/ui/QffFigure";
 import { Section } from "@/components/ui/Section";
@@ -55,6 +56,8 @@ export default function HackathonPage() {
                 {hackathon.minTeamSize}–{hackathon.maxTeamSize} members per team
               </span>
             </div>
+
+            <HackathonCountdown />
 
             <div className="mt-8 flex flex-wrap items-center gap-3">
               <Link
