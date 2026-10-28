@@ -39,6 +39,12 @@ export interface ScheduleItem {
   venue?: string;
 }
 
+export interface Webinar {
+  href: string;
+  number: string;
+  password: string;
+}
+
 export interface SocialLink {
   platform: "instagram" | "linkedin" | "x" | "github" | "youtube" | "discord" | "mail";
   href: string;

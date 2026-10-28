@@ -1,7 +1,7 @@
 "use client";
 
 import { ArrowDownRight, ArrowRight, CalendarDays, MapPin, Mic2 } from "lucide-react";
-import { schedule } from "@/data/schedule";
+import { dayWebinars, schedule } from "@/data/schedule";
 import { useEventClock } from "@/hooks/use-event-clock";
 import { getScheduleHighlight } from "@/lib/schedule-highlight";
 
@@ -11,6 +11,7 @@ export function TodayBanner() {
 
   // Once every talk has ended, the main schedule remains available below.
   if (!highlight) return null;
+  const webinar = dayWebinars[highlight.day];
 
   return (
     <aside
@@ -81,6 +82,32 @@ export function TodayBanner() {
               );
             })}
           </div>
+          {webinar && (
+            <div className="mt-4 border-t border-white/15 pt-4">
+              <p className="mb-3 text-sm font-semibold text-white">
+                Common webinar for all talks on {highlight.day}
+              </p>
+              <a
+                href={webinar.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`Join the ${highlight.day} webinar on Webex (opens in a new tab)`}
+                className="inline-flex rounded-lg bg-pink-fill px-4 py-2 text-sm font-semibold text-white transition-opacity hover:opacity-90 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pink"
+              >
+                Join on Webex
+              </a>
+              <dl className="mt-3 flex flex-wrap gap-x-6 gap-y-2 text-xs">
+                <div>
+                  <dt className="text-white/65">Webinar number</dt>
+                  <dd className="mt-1 font-mono font-semibold text-white">{webinar.number}</dd>
+                </div>
+                <div>
+                  <dt className="text-white/65">Webinar password</dt>
+                  <dd className="mt-1 font-mono font-semibold text-white">{webinar.password}</dd>
+                </div>
+              </dl>
+            </div>
+          )}
           {highlight.sessions.length > 2 && (
             <a href="#schedule" className="mt-3 inline-flex items-center gap-2 px-1 text-xs text-[#ff9ec7] underline-offset-4 hover:underline">
               +{highlight.sessions.length - 2} more sessions on the programme

@@ -1,4 +1,13 @@
-import type { ScheduleItem } from "@/types";
+import type { ScheduleItem, Webinar } from "@/types";
+
+// Shared webinar details for all talks on a given schedule day.
+export const dayWebinars: Partial<Record<string, Webinar>> = {
+  "Wed, Oct 28": {
+    href: "https://bitspilani.webex.com/bitspilani/j.php?MTID=m889ba6fd2991ba1535160ccf3c401ecd",
+    number: "2516 966 7797",
+    password: "1122",
+  },
+};
 
 // One entry per scheduled talk. Open slots are left out until they are filled.
 // Keep the ISO timestamps (IST) aligned with day/time; the homepage uses them

@@ -2,7 +2,7 @@
 
 import { useMemo, useState } from "react";
 import { MapPin } from "lucide-react";
-import { schedule } from "@/data/schedule";
+import { dayWebinars, schedule } from "@/data/schedule";
 import { event } from "@/data/event";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Section } from "@/components/ui/Section";
@@ -29,6 +29,7 @@ export function ScheduleSection() {
   const activeDay = selectedDay ?? getScheduleHighlight(schedule, now)?.day ?? days[0];
 
   const items = schedule.filter((item) => item.day === activeDay);
+  const webinar = dayWebinars[activeDay];
 
   return (
     <Section id="schedule">
@@ -56,6 +57,33 @@ export function ScheduleSection() {
           </button>
         ))}
       </div>
+
+      {webinar ? (
+        <div className="mt-6 max-w-lg rounded-xl border border-line bg-surface-2/70 p-4">
+          <p className="mb-3 text-sm font-semibold text-ink">
+            Common webinar for all talks on {activeDay}
+          </p>
+          <a
+            href={webinar.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={`Join the ${activeDay} webinar on Webex (opens in a new tab)`}
+            className="inline-flex rounded-lg bg-pink-fill px-4 py-2 text-sm font-semibold text-white transition-opacity hover:opacity-90 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pink"
+          >
+            Join on Webex
+          </a>
+          <dl className="mt-3 flex flex-wrap gap-x-6 gap-y-2 text-sm">
+            <div>
+              <dt className="text-muted">Webinar number</dt>
+              <dd className="mt-1 font-mono font-semibold text-ink">{webinar.number}</dd>
+            </div>
+            <div>
+              <dt className="text-muted">Webinar password</dt>
+              <dd className="mt-1 font-mono font-semibold text-ink">{webinar.password}</dd>
+            </div>
+          </dl>
+        </div>
+      ) : null}
 
       {/* The rail is a border on the list itself, so it ends exactly at the
           last session instead of running past it. */}
