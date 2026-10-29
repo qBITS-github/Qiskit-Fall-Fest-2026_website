@@ -141,15 +141,29 @@ export default function HackathonPage() {
                           </ul>
                         </div>
                       )}
-                      {statement.documentHref && (
-                        <a
-                          href={statement.documentHref}
-                          download
-                          className="mt-6 inline-flex items-center gap-2 text-sm font-bold text-pink-ink underline-offset-4 hover:underline"
-                        >
-                          <FileText aria-hidden className="h-4 w-4" />
-                          Download full problem statement
-                        </a>
+                      {(statement.documentHref || statement.datasetHref) && (
+                        <div className="mt-6 flex flex-wrap items-center gap-x-6 gap-y-3">
+                          {statement.documentHref && (
+                            <a
+                              href={statement.documentHref}
+                              download
+                              className="inline-flex items-center gap-2 text-sm font-bold text-pink-ink underline-offset-4 hover:underline"
+                            >
+                              <FileText aria-hidden className="h-4 w-4" />
+                              Download full problem statement
+                            </a>
+                          )}
+                          {statement.datasetHref && (
+                            <a
+                              href={statement.datasetHref}
+                              download
+                              className="inline-flex items-center gap-2 text-sm font-bold text-pink-ink underline-offset-4 hover:underline"
+                            >
+                              <FileText aria-hidden className="h-4 w-4" />
+                              Download graph dataset (.npy)
+                            </a>
+                          )}
+                        </div>
                       )}
                     </article>
                   ))}

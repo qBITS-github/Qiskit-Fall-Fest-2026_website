@@ -110,6 +110,7 @@ export const problemStatements: ProblemStatement[] = [
       "Finite-shot experiments and an analysis of graph properties affecting solution difficulty.",
     ],
     documentHref: "/hackathon/optimising-the-optimiser.pdf",
+    datasetHref: "/hackathon/optimising-the-optimiser-graph.npy",
   },
   {
     id: "trust-a-quantum-simulation",

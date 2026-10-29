@@ -17,6 +17,8 @@ export interface ProblemStatement {
   judgingCriteria?: string[];
   /** Optional brief stored under /public, e.g. /hackathon/quantum-search.pdf. */
   documentHref?: string;
+  /** Optional supporting dataset for the challenge. */
+  datasetHref?: string;
 }
 
 export interface EventDetail {
