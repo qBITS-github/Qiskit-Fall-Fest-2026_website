@@ -39,6 +39,7 @@ Whether you are a complete beginner or a coding veteran, join us to build tomorr
  */
 export const hackathon = {
   startsAt: "2026-10-29T00:00:00+05:30",
+  endsAt: "2026-11-01T00:00:00+05:30",
   duration: "72 hours",
   minTeamSize: 1,
   maxTeamSize: 4,

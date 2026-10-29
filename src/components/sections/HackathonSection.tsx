@@ -5,6 +5,7 @@ import { Section } from "@/components/ui/Section";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { QffFigure } from "@/components/ui/QffFigure";
 import { Pending, isPending } from "@/components/ui/Pending";
+import { HackathonCountdown } from "@/components/hackathon/HackathonCountdown";
 
 /**
  * The hackathon: a short brief, its tracks, the rulebook, and a way in.
@@ -52,6 +53,8 @@ export function HackathonSection() {
             </li>
           ))}
         </ul>
+
+        <HackathonCountdown />
 
         <div className="mt-8 flex flex-wrap items-center gap-3">
           <Link
