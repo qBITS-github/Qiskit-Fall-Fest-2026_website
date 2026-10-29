@@ -76,11 +76,9 @@ export function HackathonCountdown() {
     </>
   );
 
-  const statusText = isLive
-    ? "The hackathon is live. Happy hacking!"
-    : isEnded
-      ? "The 72-hour hackathon has concluded. Submissions are closed."
-      : "";
+  const statusText = isEnded
+    ? "The 72-hour hackathon has concluded. Submissions are closed."
+    : "";
 
   return (
     <div className="mt-8 max-w-2xl rounded-2xl border border-pink/30 bg-surface-2/80 p-5 backdrop-blur-sm sm:p-6">
@@ -112,9 +110,11 @@ export function HackathonCountdown() {
         </dl>
       </div>
 
-      <p role="status" className="mt-3 min-h-5 text-sm font-semibold text-pink-ink">
-        {statusText}
-      </p>
+      {statusText ? (
+        <p role="status" className="mt-3 text-sm font-semibold text-pink-ink">
+          {statusText}
+        </p>
+      ) : null}
     </div>
   );
 }
