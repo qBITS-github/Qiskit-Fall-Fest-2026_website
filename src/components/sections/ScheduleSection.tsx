@@ -72,16 +72,22 @@ export function ScheduleSection() {
           >
             Join on Webex
           </a>
-          <dl className="mt-3 flex flex-wrap gap-x-6 gap-y-2 text-sm">
-            <div>
-              <dt className="text-muted">Webinar number</dt>
-              <dd className="mt-1 font-mono font-semibold text-ink">{webinar.number}</dd>
-            </div>
-            <div>
-              <dt className="text-muted">Webinar password</dt>
-              <dd className="mt-1 font-mono font-semibold text-ink">{webinar.password}</dd>
-            </div>
-          </dl>
+          {(webinar.number || webinar.password) && (
+            <dl className="mt-3 flex flex-wrap gap-x-6 gap-y-2 text-sm">
+              {webinar.number && (
+                <div>
+                  <dt className="text-muted">Webinar number</dt>
+                  <dd className="mt-1 font-mono font-semibold text-ink">{webinar.number}</dd>
+                </div>
+              )}
+              {webinar.password && (
+                <div>
+                  <dt className="text-muted">Webinar password</dt>
+                  <dd className="mt-1 font-mono font-semibold text-ink">{webinar.password}</dd>
+                </div>
+              )}
+            </dl>
+          )}
         </div>
       ) : null}
 

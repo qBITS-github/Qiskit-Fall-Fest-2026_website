@@ -12,6 +12,9 @@ export const dayWebinars: Partial<Record<string, Webinar>> = {
     number: "2517 179 1129",
     password: "1122 (1122 when dialing from a video system)",
   },
+  "Fri, Oct 30": {
+    href: "https://bitspilani.webex.com/bitspilani/j.php?MTID=mf1ac720ed554839b7c249bcd6ba9298d",
+  },
 };
 
 // One entry per scheduled talk. Open slots are left out until they are filled.

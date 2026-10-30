@@ -44,8 +44,8 @@ export interface ScheduleItem {
 
 export interface Webinar {
   href: string;
-  number: string;
-  password: string;
+  number?: string;
+  password?: string;
 }
 
 export interface SocialLink {

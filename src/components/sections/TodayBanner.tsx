@@ -96,16 +96,22 @@ export function TodayBanner() {
               >
                 Join on Webex
               </a>
-              <dl className="mt-3 flex flex-wrap gap-x-6 gap-y-2 text-xs">
-                <div>
-                  <dt className="text-white/65">Webinar number</dt>
-                  <dd className="mt-1 font-mono font-semibold text-white">{webinar.number}</dd>
-                </div>
-                <div>
-                  <dt className="text-white/65">Webinar password</dt>
-                  <dd className="mt-1 font-mono font-semibold text-white">{webinar.password}</dd>
-                </div>
-              </dl>
+              {(webinar.number || webinar.password) && (
+                <dl className="mt-3 flex flex-wrap gap-x-6 gap-y-2 text-xs">
+                  {webinar.number && (
+                    <div>
+                      <dt className="text-white/65">Webinar number</dt>
+                      <dd className="mt-1 font-mono font-semibold text-white">{webinar.number}</dd>
+                    </div>
+                  )}
+                  {webinar.password && (
+                    <div>
+                      <dt className="text-white/65">Webinar password</dt>
+                      <dd className="mt-1 font-mono font-semibold text-white">{webinar.password}</dd>
+                    </div>
+                  )}
+                </dl>
+              )}
             </div>
           )}
           {highlight.sessions.length > 2 && (
