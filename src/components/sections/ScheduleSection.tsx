@@ -30,6 +30,7 @@ export function ScheduleSection() {
 
   const items = schedule.filter((item) => item.day === activeDay);
   const webinar = dayWebinars[activeDay];
+  const sessionWebinars = items.filter((item) => item.webinarHref);
 
   return (
     <Section id="schedule">
@@ -89,6 +90,34 @@ export function ScheduleSection() {
             </dl>
           )}
         </div>
+      ) : sessionWebinars.length > 0 ? (
+        <div className="mt-6 max-w-xl rounded-xl border border-line bg-surface-2/70 p-4">
+          <p className="mb-3 text-sm font-semibold text-ink">
+            Webinar links for talks on {activeDay}
+          </p>
+          <div className="grid gap-3 sm:grid-cols-2">
+            {sessionWebinars.map((session) => (
+              <div
+                key={session.id}
+                className="flex flex-col justify-between rounded-lg border border-line-soft bg-surface/70 p-3"
+              >
+                <div>
+                  <p className="text-sm font-semibold text-ink">{session.title}</p>
+                  <p className="mt-0.5 font-mono text-xs text-pink-ink">{session.time}</p>
+                </div>
+                <a
+                  href={session.webinarHref}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`Join ${session.title}'s talk on Webex (opens in a new tab)`}
+                  className="mt-3 inline-flex items-center justify-center rounded-lg bg-pink-fill px-3 py-1.5 text-xs font-semibold text-white transition-opacity hover:opacity-90 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pink"
+                >
+                  Join on Webex
+                </a>
+              </div>
+            ))}
+          </div>
+        </div>
       ) : null}
 
       {/* The rail is a border on the list itself, so it ends exactly at the
@@ -129,12 +158,25 @@ export function ScheduleSection() {
                 {item.description}
               </p>
             ) : null}
-            {item.venue ? (
-              <p className="mt-3 inline-flex items-center gap-1.5 rounded-md border border-pink/25 bg-pink/10 px-2.5 py-1.5 font-mono text-xs font-semibold text-pink-ink">
-                <MapPin aria-hidden="true" className="h-3.5 w-3.5 shrink-0" />
-                {item.venue}
-              </p>
-            ) : null}
+            <div className="mt-3 flex flex-wrap items-center gap-2">
+              {item.venue ? (
+                <p className="inline-flex items-center gap-1.5 rounded-md border border-pink/25 bg-pink/10 px-2.5 py-1.5 font-mono text-xs font-semibold text-pink-ink">
+                  <MapPin aria-hidden="true" className="h-3.5 w-3.5 shrink-0" />
+                  {item.venue}
+                </p>
+              ) : null}
+              {item.webinarHref ? (
+                <a
+                  href={item.webinarHref}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`Join ${item.title}'s talk on Webex (opens in a new tab)`}
+                  className="inline-flex items-center gap-1.5 rounded-md bg-pink-fill px-3 py-1.5 font-mono text-xs font-semibold text-white transition-opacity hover:opacity-90 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pink"
+                >
+                  Join on Webex
+                </a>
+              ) : null}
+            </div>
           </RevealOnScroll>
         ))}
       </ol>

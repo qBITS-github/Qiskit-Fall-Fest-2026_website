@@ -78,6 +78,19 @@ export function TodayBanner() {
                     )}
                     {session.track && <span className="rounded-full border border-white/15 px-2 py-0.5">{session.track}</span>}
                   </div>
+                  {session.webinarHref && (
+                    <div className="mt-4">
+                      <a
+                        href={session.webinarHref}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label={`Join ${session.title}'s talk on Webex (opens in a new tab)`}
+                        className="inline-flex items-center gap-1.5 rounded-lg bg-pink-fill px-3.5 py-1.5 text-xs font-semibold text-white transition-opacity hover:opacity-90 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pink"
+                      >
+                        Join on Webex
+                      </a>
+                    </div>
+                  )}
                 </div>
               );
             })}

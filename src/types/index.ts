@@ -40,6 +40,7 @@ export interface ScheduleItem {
   description: string;
   track?: string;
   venue?: string;
+  webinarHref?: string;
 }
 
 export interface Webinar {
