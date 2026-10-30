@@ -127,4 +127,26 @@ export const problemStatements: ProblemStatement[] = [
     ],
     documentHref: "/hackathon/when-can-we-trust-a-quantum-simulation.pdf",
   },
+  {
+    id: "split-the-circuit",
+    trackId: "advanced",
+    title: "Split the Circuit",
+    description:
+      "Building a Distributed Quantum Compiler with Qiskit and GenAI. Develop a compiler that partitions quantum circuits across simulated quantum processing units, schedules local and non-local operations, manages entanglement and classical communication, and reconstructs correct results using Qiskit Aer. Implement state and gate teleportation alongside a circuit-cutting method. Use GenAI to propose improved partitions or execution plans, validate every proposal against resource constraints, and compare performance with a static partitioning baseline.",
+    deliverables: [
+      "A reusable compiler with static and time-sliced qubit partitioning, local circuit fragments, and a communication plan.",
+      "Working teleportation primitives and at least one circuit-cutting method with verified reconstruction.",
+      "A resource-aware scheduler, communication manager, and controller, including execution timelines and makespan estimates.",
+      "A GenAI-assisted optimisation workflow with deterministic validation and a comparison against the workflow without GenAI.",
+      "Reproducible Qiskit Aer benchmarks, correctness checks, resource and cost metrics, technical report, and demonstration. See the full brief for submission requirements.",
+    ],
+    judgingCriteria: [
+      "Correctness: 25",
+      "Cost efficiency: 25",
+      "System design: 20",
+      "GenAI and ablation: 15",
+      "Explanation and demo: 15",
+    ],
+    documentHref: "/hackathon/split-the-circuit.pdf",
+  },
 ];
