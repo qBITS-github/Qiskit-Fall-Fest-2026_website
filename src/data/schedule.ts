@@ -89,7 +89,7 @@ export const schedule: ScheduleItem[] = [
     time: "11:00 AM - 12:30 PM",
     title: "Bhupendra Singh",
     description: "DRDO",
-    venue: "Venue TBC",
+    venue: "T.P. (Telepresence Room)",
     track: "In person",
   },
   {
@@ -100,7 +100,7 @@ export const schedule: ScheduleItem[] = [
     time: "12:30 PM - 2:00 PM",
     title: "Santosh Kumar",
     description: "IIT Goa, Photonics",
-    venue: "Venue TBC",
+    venue: "T.P. (Telepresence Room)",
     track: "In person",
   },
   {
@@ -109,9 +109,9 @@ export const schedule: ScheduleItem[] = [
     endsAt: "2026-10-31T16:00:00+05:30",
     day: "Sat, Oct 31",
     time: "3:00 PM - 4:00 PM",
-    title: "Anupama Ray",
+    title: "Ritajit Majumdar",
     description: "IBM India",
-    venue: "Venue TBC",
+    venue: "T.P. (Telepresence Room)",
     track: "Virtual",
   },
   {
@@ -120,9 +120,9 @@ export const schedule: ScheduleItem[] = [
     endsAt: "2026-10-31T17:00:00+05:30",
     day: "Sat, Oct 31",
     time: "4:00 PM - 5:00 PM",
-    title: "Ritajit Majumdar",
+    title: "Anupama Ray",
     description: "IBM India",
-    venue: "Venue TBC",
+    venue: "T.P. (Telepresence Room)",
     track: "Virtual",
   },
   // Sun, Nov 1
