@@ -89,7 +89,7 @@ export const schedule: ScheduleItem[] = [
     time: "11:00 AM - 12:30 PM",
     title: "Bhupendra Singh",
     description: "DRDO",
-    venue: "T.P. (Telepresence Room)",
+    venue: "Telepresence Room",
     track: "In person",
   },
   {
@@ -100,7 +100,7 @@ export const schedule: ScheduleItem[] = [
     time: "12:30 PM - 2:00 PM",
     title: "Santosh Kumar",
     description: "IIT Goa, Photonics",
-    venue: "T.P. (Telepresence Room)",
+    venue: "Telepresence Room",
     track: "In person",
   },
   {
@@ -111,7 +111,7 @@ export const schedule: ScheduleItem[] = [
     time: "3:00 PM - 4:00 PM",
     title: "Ritajit Majumdar",
     description: "IBM India",
-    venue: "T.P. (Telepresence Room)",
+    venue: "Telepresence Room",
     track: "Virtual",
   },
   {
@@ -122,7 +122,7 @@ export const schedule: ScheduleItem[] = [
     time: "4:00 PM - 5:00 PM",
     title: "Anupama Ray",
     description: "IBM India",
-    venue: "T.P. (Telepresence Room)",
+    venue: "Telepresence Room",
     track: "Virtual",
   },
   // Sun, Nov 1
